@@ -1,19 +1,49 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
 
-# SQLite
-*.db
-
-# Environment
+# Virtual environments
 venv/
+.venv/
+env/
+
+# Local configuration and secrets
 .env
+.env.*
+!.env.example
 
-# VS Code
-.vscode/
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
 
-# macOS
-.DS_Store
-
-# Logs
+# Logs and editor state
 *.log
+*.bak
+*.swp
+.DS_Store
+.vscode/
+.progress
+
+# Local backups
+backup_before_*/
+frontend_backup*/
+frontend_before_ui_polish*/
+
+# Generated files
+node_modules/
+dist/
+
+# Manual external API smoke test
+test_gemini.py
+
+# Local UI backup copies; keep them on this machine only
+/frontend/css/*.backup
+/frontend/css/*.before-cleanup
+/frontend/css/*_before_final_polish.css
+/frontend/js/*.bak_before_*

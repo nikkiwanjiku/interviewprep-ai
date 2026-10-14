@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Integer, Text, ForeignKey
+from sqlalchemy import Column, Integer, Text, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
+from sqlalchemy.sql import func
 
 from app.database import Base
 
@@ -21,12 +22,29 @@ class InterviewAnswer(Base):
         nullable=False
     )
 
-    user_answer = Column(Text)
+    user_answer = Column(Text, nullable=False)
 
-    score = Column(Integer, default=0)
+    score = Column(Integer, nullable=False)
 
     feedback = Column(Text)
 
-    interview = relationship("Interview")
+    strengths = Column(Text)
 
-    question = relationship("Question")
+    improvements = Column(Text)
+
+    ideal_answer = Column(Text)
+
+    answered_at = Column(
+        DateTime(timezone=True),
+        server_default=func.now()
+    )
+
+    interview = relationship(
+        "Interview",
+        back_populates="answers"
+    )
+
+    question = relationship(
+        "Question",
+        back_populates="interview_answers"
+    )

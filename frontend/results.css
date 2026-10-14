@@ -1,0 +1,35 @@
+body{
+
+    background:#F5F7FA;
+
+}
+
+.card{
+
+    border-radius:20px;
+
+}
+
+#score{
+
+    color:#2563EB;
+
+    font-size:60px;
+
+    font-weight:bold;
+
+}
+
+.answer-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-top:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}

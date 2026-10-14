@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Akira Prep</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/login.css">
+
+
+<script src="js/ui.js" defer></script>
+<script src="js/api.js" defer></script>
+<script src="js/auth.js" defer></script>
+</head>
+
+<body>
+
+    <div class="background-circle bg-one"></div>
+    <div class="background-circle bg-two"></div>
+
+    <div class="container min-vh-100 d-flex align-items-center">
+
+        <div class="row w-100 align-items-center">
+
+            <!-- LEFT PANEL -->
+
+            <div class="col-lg-6 d-none d-lg-flex">
+
+                <div class="hero-section">
+
+                    <a href="index.html" class="brand">
+
+                        <div class="logo-circle">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <h1>Akira Prep</h1>
+
+                            <p>AI Interview Coach</p>
+
+                        </div>
+
+                    </a>
+
+                    <h2>
+
+                        Master Interviews
+                        <br>
+                        With Confidence.
+
+                    </h2>
+
+                    <p class="hero-text">
+
+                        Practice realistic interview questions.
+
+                        Receive AI-powered coaching.
+
+                        Improve after every interview.
+
+                        Land your dream job.
+
+                    </p>
+
+                    <div class="feature-list">
+
+                        <div class="feature-card">
+
+                            <i class="bi bi-stars"></i>
+
+                            <div>
+
+                                <h5>AI Feedback</h5>
+
+                                <p>
+                                    Personalized feedback after every answer.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feature-card">
+
+                            <i class="bi bi-graph-up-arrow"></i>
+
+                            <div>
+
+                                <h5>Track Progress</h5>
+
+                                <p>
+                                    Monitor your improvement over time.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feature-card">
+
+                            <i class="bi bi-file-earmark-pdf"></i>
+
+                            <div>
+
+                                <h5>Interview Reports</h5>
+
+                                <p>
+                                    Download beautiful PDF performance reports.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL -->
+
+            <div class="col-lg-5 mx-auto">
+
+                <div class="login-card">
+
+                    <h2>
+
+                        Welcome Back 👋
+
+                    </h2>
+
+                    <p class="subtitle">
+
+                        Continue your interview journey.
+
+                    </p>
+
+                    <form id="loginForm">
+
+                        <div class="mb-4">
+
+                            <label>Email</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label>Password</label>
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="form-control"
+                                    placeholder="Enter your password"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    id="togglePassword"
+                                    class="password-toggle">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="login-options">
+
+                            <div>
+
+                                <input
+                                    type="checkbox"
+                                    id="remember">
+
+                                <label for="remember">
+
+                                    Remember me
+
+                                </label>
+
+                            </div>
+
+                            <a href="#">
+
+                                Forgot password?
+
+                            </a>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary login-btn">
+
+                            Sign In
+
+                        </button>
+
+                    </form>
+
+                    <div class="divider">
+
+                        <span>or</span>
+
+                    </div>
+
+                    <div class="security">
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Secure Login
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-robot"></i>
+
+                            AI Powered
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-award"></i>
+
+                            Professional Practice
+
+                        </div>
+
+                    </div>
+
+                    <p class="register-link">
+
+                        Don't have an account?
+
+                        <a href="register.html">
+
+                            Create one
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Password Toggle -->
+
+    <script>
+
+        const password = document.getElementById("password");
+        const toggle = document.getElementById("togglePassword");
+        const icon = toggle.querySelector("i");
+
+        toggle.addEventListener("click", () => {
+
+            const hidden = password.type === "password";
+
+            password.type = hidden ? "text" : "password";
+
+            icon.classList.toggle("bi-eye");
+
+            icon.classList.toggle("bi-eye-slash");
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Interview Setup | Akira Prep</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <style>
+
+        body {
+            background: var(--background);
+        }
+
+        .setup-wrapper {
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+        .setup-card {
+
+            width: min(600px, 100%);
+
+            background: var(--surface);
+
+            border-radius: 28px;
+
+            padding: 45px;
+
+            box-shadow: var(--shadow-lg);
+        }
+
+        .setup-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .setup-icon {
+
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 20px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 32px;
+
+            background: #F3E8FF;
+        }
+
+        .setup-header h1 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .setup-header p {
+            color: var(--text-light);
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .form-select {
+
+            padding: 14px 16px;
+
+            border-radius: 14px;
+
+            border: 1px solid #E5E7EB;
+        }
+
+        .form-select:focus {
+
+            border-color: #7C3AED;
+
+            box-shadow:
+                0 0 0 4px rgba(124, 58, 237, .12);
+        }
+
+        .start-btn {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border-radius: 16px;
+
+            font-weight: 700;
+
+            margin-top: 10px;
+        }
+
+        .back-link {
+
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: var(--text-light);
+
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="setup-wrapper">
+
+    <div class="setup-card">
+
+        <!-- HEADER -->
+
+        <div class="setup-header">
+
+            <div class="setup-icon">
+                🎯
+            </div>
+
+            <h1>
+                Start Your Interview
+            </h1>
+
+            <p>
+                Customize your practice session.
+            </p>
+
+        </div>
+
+
+        <!-- CATEGORY -->
+
+        <div class="mb-4">
+
+            <label
+                for="category"
+                class="form-label">
+
+                Interview Category
+
+            </label>
+
+            <select
+                id="category"
+                class="form-select">
+
+                <option value="">
+                    Loading categories...
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- DIFFICULTY -->
+
+        <div class="mb-4">
+
+            <label
+                for="difficulty"
+                class="form-label">
+
+                Difficulty
+
+            </label>
+
+            <select
+                id="difficulty"
+                class="form-select">
+
+                <option value="Easy">
+                    Easy
+                </option>
+
+                <option
+                    value="Intermediate"
+                    selected>
+
+                    Intermediate
+
+                </option>
+
+                <option value="Hard">
+                    Hard
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- QUESTION COUNT -->
+
+        <div class="mb-4">
+
+            <label
+                for="questionCount"
+                class="form-label">
+
+                Number of Questions
+
+            </label>
+
+            <select
+                id="questionCount"
+                class="form-select">
+
+                <option value="5">
+                    5 Questions
+                </option>
+
+                <option
+                    value="10"
+                    selected>
+
+                    10 Questions
+
+                </option>
+
+                <option value="15">
+                    15 Questions
+                </option>
+
+                <option value="20">
+                    20 Questions
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- START -->
+
+        <button
+            id="startBtn"
+            class="btn btn-primary start-btn">
+
+            <i class="bi bi-play-fill"></i>
+
+            Start Interview
+
+        </button>
+
+
+        <a
+            href="dashboard.html"
+            class="back-link">
+
+            ← Back to Dashboard
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<script src="js/api.js"></script>
+
+<script src="js/interview-setup.js"></script>
+
+</body>
+
+</html>

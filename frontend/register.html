@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Akira Prep</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="css/theme.css">
+
+    <link
+        rel="stylesheet"
+        href="css/register.css">
+
+</head>
+
+<body>
+
+<div class="container min-vh-100 d-flex align-items-center justify-content-center">
+
+    <div class="row w-100 align-items-center">
+
+        <!-- ==========================================
+             LEFT SIDE
+        =========================================== -->
+
+        <div class="col-lg-6 d-none d-lg-block">
+
+            <div class="hero-section">
+
+                <h1 class="display-4 fw-bold">
+                    🌸 Akira Prep
+                </h1>
+
+                <h3 class="mt-4">
+                    Your interview journey starts here.
+                </h3>
+
+                <p class="mt-4 hero-text">
+
+                    Create your account to practice mock interviews,
+                    receive AI-powered feedback, track your progress,
+                    and build confidence before your next opportunity.
+
+                </p>
+
+                <div class="feature-list mt-5">
+
+                    <p>✨ AI Feedback</p>
+
+                    <p>📈 Progress Tracking</p>
+
+                    <p>📄 Interview Reports</p>
+
+                    <p>🎯 Real Interview Questions</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+             RIGHT SIDE
+        =========================================== -->
+
+        <div class="col-lg-5 mx-auto">
+
+            <div class="card login-card">
+
+                <div class="card-body p-5">
+
+                    <h2 class="text-center">
+
+                        Create Your Account 💖
+
+                    </h2>
+
+                    <p class="text-center text-muted mb-4">
+
+                        Let's begin your interview journey.
+
+                    </p>
+
+
+                    <!-- ==================================
+                         REGISTRATION FORM
+                    =================================== -->
+
+                    <form id="registerForm">
+
+
+                        <!-- Full Name -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="full_name"
+                                class="form-label">
+
+                                Full Name
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="full_name"
+                                name="full_name"
+                                class="form-control"
+                                placeholder="Enter your full name"
+                                required>
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="email"
+                                class="form-label">
+
+                                Email
+
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="you@example.com"
+                                required>
+
+                        </div>
+
+
+                        <!-- Password -->
+
+                        <div class="mb-3">
+
+                            <label
+                                for="password"
+                                class="form-label">
+
+                                Password
+
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required>
+
+                        </div>
+
+
+                        <!-- Career Goal -->
+
+                        <div class="mb-4">
+
+                            <label
+                                for="career_goal"
+                                class="form-label">
+
+                                Career Goal
+
+                            </label>
+
+                            <select
+                                id="career_goal"
+                                name="career_goal"
+                                class="form-select"
+                                required>
+
+                                <option value="">
+                                    Select your career goal
+                                </option>
+
+                                <option value="Software Engineer">
+                                    Software Engineer
+                                </option>
+
+                                <option value="Frontend Developer">
+                                    Frontend Developer
+                                </option>
+
+                                <option value="Backend Developer">
+                                    Backend Developer
+                                </option>
+
+                                <option value="Mobile Developer">
+                                    Mobile Developer
+                                </option>
+
+                                <option value="Data Engineer">
+                                    Data Engineer
+                                </option>
+
+                                <option value="AI / ML Engineer">
+                                    AI / ML Engineer
+                                </option>
+
+                                <option value="Cybersecurity Engineer">
+                                    Cybersecurity Engineer
+                                </option>
+
+                                <option value="UI Engineer">
+                                    UI Engineer
+                                </option>
+
+                                <option value="UX Designer">
+                                    UX Designer
+                                </option>
+
+                                <option value="UX Researcher">
+                                    UX Researcher
+                                </option>
+
+                                <option value="QA Engineer">
+                                    QA Engineer
+                                </option>
+
+                                <option value="Product Manager">
+                                    Product Manager
+                                </option>
+
+                                <option value="DevOps / Cloud Engineer">
+                                    DevOps / Cloud Engineer
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            id="registerBtn"
+                            class="btn btn-primary w-100">
+
+                            Create Account
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- Login link -->
+
+                    <p class="text-center mt-4 mb-0">
+
+                        Already have an account?
+
+                        <a href="login.html">
+
+                            Sign in
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script src="js/api.js"></script>
+
+<script src="js/ui.js"></script>
+
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

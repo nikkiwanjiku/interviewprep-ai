@@ -1,0 +1,206 @@
+:root {
+    --pink-50: #fff7fb;
+    --pink-100: #ffeaf4;
+    --pink-200: #ffd4e8;
+    --pink-300: #f8b8d4;
+    --pink-400: #ed8fba;
+    --pink-500: #df6fa4;
+    --pink-600: #c9568b;
+
+    --purple-50: #faf7ff;
+    --purple-100: #f1e9ff;
+    --purple-200: #e2d2ff;
+    --purple-300: #cbb0f5;
+    --purple-400: #a980dc;
+    --purple-500: #8b63c7;
+    --purple-600: #7046aa;
+
+    --text-main: #30283a;
+    --text-secondary: #716879;
+    --text-muted: #9b92a3;
+
+    --surface: #ffffff;
+    --background: #fcf9fc;
+    --border: #eee5ef;
+
+    --success: #62ad8c;
+    --warning: #e6ad62;
+    --danger: #d96c7e;
+
+    --gradient-primary: linear-gradient(
+        135deg,
+        #df6fa4 0%,
+        #a980dc 100%
+    );
+
+    --shadow-sm:
+        0 4px 16px rgba(91, 60, 105, 0.06);
+
+    --shadow-md:
+        0 10px 30px rgba(91, 60, 105, 0.09);
+
+    --shadow-lg:
+        0 18px 45px rgba(91, 60, 105, 0.12);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-xl: 28px;
+
+    --sidebar-width: 250px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at 85% 5%,
+            rgba(226, 210, 255, 0.25),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(255, 212, 232, 0.22),
+            transparent 25%
+        ),
+        var(--background);
+
+    color: var(--text-main);
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: 0;
+}
+
+::selection {
+    background: var(--pink-200);
+    color: var(--purple-600);
+}
+
+/* --------------------------------
+   Scrollbar
+-------------------------------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pink-50);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--pink-300);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink-400);
+}
+
+/* --------------------------------
+   Global utility classes
+-------------------------------- */
+
+.text-pink {
+    color: var(--pink-600);
+}
+
+.text-purple {
+    color: var(--purple-600);
+}
+
+.muted {
+    color: var(--text-muted);
+}
+
+.card-soft {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+/* --------------------------------
+   Buttons
+-------------------------------- */
+
+.btn-primary {
+    background: var(--gradient-primary) !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 13px !important;
+    padding: 11px 20px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 8px 20px rgba(201, 86, 139, 0.2);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(201, 86, 139, 0.28);
+}
+
+/* --------------------------------
+   Cherry blossom decoration
+-------------------------------- */
+
+.sakura-decoration {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.65;
+    font-size: 26px;
+}
+
+.sakura-one {
+    top: 25px;
+    right: 35px;
+    transform: rotate(12deg);
+}
+
+.sakura-two {
+    bottom: 25px;
+    left: 25px;
+    transform: rotate(-15deg);
+}
+
+/* --------------------------------
+   Responsive
+-------------------------------- */
+
+@media (max-width: 900px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+}

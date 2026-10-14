@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Question Bank | Akira Prep</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/question-bank.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <span class="logo-flower">🌸</span>
+            <span class="logo-text">Akira Prep</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="interview-setup.html" class="nav-item">
+                <i class="bi bi-mic-fill"></i>
+                <span>Practice</span>
+            </a>
+
+            <a href="question-bank.html" class="nav-item active">
+                <i class="bi bi-book-fill"></i>
+                <span>Question Bank</span>
+            </a>
+
+            <a href="analytics.html" class="nav-item">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span>Analytics</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <i class="bi bi-person-fill"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="#" class="nav-item logout" id="logoutBtn">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <!-- TOP BAR -->
+        <header class="top-nav">
+
+            <div>
+                <h3>Question Bank</h3>
+                <p class="top-subtitle">
+                    Explore questions and sharpen your interview skills.
+                </p>
+            </div>
+
+            <div class="top-nav-right">
+
+                <button class="icon-btn">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+                <div class="avatar" id="userAvatar">
+                    NW
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="question-hero">
+
+            <div class="hero-decoration blossom-one">🌸</div>
+            <div class="hero-decoration blossom-two">🌸</div>
+
+            <div class="hero-content">
+
+                <div class="hero-icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+
+                <div>
+                    <span class="eyebrow">LEARN • PRACTICE • GROW</span>
+
+                    <h1>
+                        Build your confidence,
+                        <span>one question at a time.</span>
+                    </h1>
+
+                    <p>
+                        Practice frontend interview questions across
+                        HTML, CSS, JavaScript, React and modern web development.
+                    </p>
+                </div>
+
+            </div>
+
+            <a href="interview-setup.html" class="start-practice-btn">
+                <i class="bi bi-play-fill"></i>
+                Start Practice
+            </a>
+
+        </section>
+
+
+        <!-- SEARCH + FILTERS -->
+        <section class="question-controls">
+
+            <div class="search-box">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search questions..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <select id="topicFilter" class="filter-select">
+                    <option value="all">All Topics</option>
+                    <option value="HTML & CSS">HTML & CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="DOM & Browser APIs">DOM & Browser APIs</option>
+                    <option value="Responsive Design">Responsive Design</option>
+                    <option value="Accessibility">Accessibility</option>
+                    <option value="React">React</option>
+                    <option value="Next.js">Next.js</option>
+                </select>
+
+                <select id="difficultyFilter" class="filter-select">
+                    <option value="all">All Difficulties</option>
+                    <option value="easy">Easy</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOPIC PILLS -->
+        <section class="topic-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-kicker">EXPLORE</span>
+                    <h2>Frontend Web</h2>
+                </div>
+
+                <span class="question-count" id="questionCount">
+                    0 questions
+                </span>
+
+            </div>
+
+
+            <div class="topic-pills">
+
+                <button class="topic-pill active" data-topic="all">
+                    <i class="bi bi-grid-fill"></i>
+                    All
+                </button>
+
+                <button class="topic-pill" data-topic="HTML & CSS">
+                    <i class="bi bi-code-slash"></i>
+                    HTML & CSS
+                </button>
+
+                <button class="topic-pill" data-topic="JavaScript">
+                    <i class="bi bi-filetype-js"></i>
+                    JavaScript
+                </button>
+
+                <button class="topic-pill" data-topic="React">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    React
+                </button>
+
+                <button class="topic-pill" data-topic="Next.js">
+                    <i class="bi bi-arrow-up-right-circle-fill"></i>
+                    Next.js
+                </button>
+
+                <button class="topic-pill" data-topic="Accessibility">
+                    <i class="bi bi-universal-access-circle"></i>
+                    Accessibility
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUESTIONS -->
+        <section class="questions-section">
+
+            <div
+                id="questionsGrid"
+                class="questions-grid"
+            >
+
+                <!-- Questions injected by JS -->
+
+            </div>
+
+
+            <div
+                id="emptyState"
+                class="empty-state d-none"
+            >
+
+                <div class="empty-icon">
+                    🌸
+                </div>
+
+                <h3>No questions found</h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+                <button
+                    id="clearFilters"
+                    class="clear-btn"
+                >
+                    Clear filters
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/api.js"></script>
+<script src="js/question-bank.js"></script>
+
+</body>
+</html>

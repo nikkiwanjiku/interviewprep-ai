@@ -16,8 +16,9 @@ class QuestionResponse(BaseModel):
     category_id: int
 
     class Config:
-        from_attributes = 
-        
+        from_attributes = True
+
+
 class InterviewQuestionResponse(BaseModel):
     id: int
     question: str
